@@ -1,0 +1,26 @@
+@import 'palette';
+@import '404';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
+@import 'base/body';
+@import 'base/link';
+@import 'base/list';
+@import 'base/blockquote';
+@import 'base/image';
+@import 'base/pre';
+@import 'base/header';
+@import 'base/paragraph';
+@import 'base/table';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $background;
+    font-size: 1.5em;
+    color: $foreground;
+    text-shadow: 0.05em 0.05em lightgray;
+}
