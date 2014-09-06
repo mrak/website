@@ -126,7 +126,7 @@ footer {
   color: gray; }
 
 body {
-  font-family: sans; }
+  font-family: sans, sans-serif, Helvetica, Arial; }
 
 a {
   text-decoration: none;
