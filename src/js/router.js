@@ -9,7 +9,7 @@ function go(resource) {
         goErr();
         return;
       }
-      if (res.notFound) {
+      if (res.notFound || /^<!doctype html>/.test(res.text)) {
         go('/html/404.html');
         return;
       }
