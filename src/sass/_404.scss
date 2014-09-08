@@ -14,7 +14,7 @@ $inner-size: $size - (4*$thickness);
     position: absolute;
     margin: $thickness;
     display: block;
-    font-size: 4em;
+    font-size: $size / 3;
     line-height: $inner-size;
     height: $inner-size;
     width: $inner-size;
@@ -50,7 +50,7 @@ $inner-size: $size - (4*$thickness);
     background: $background;
     border-radius: $inner-size;
 
-    animation: counter-clockwise 5s infinite linear;
+    animation: counter-clockwise 10s infinite linear;
 }
 
 @keyframes clockwise {

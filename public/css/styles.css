@@ -8,7 +8,7 @@
   position: absolute;
   margin: 1vw;
   display: block;
-  font-size: 4em;
+  font-size: 6.66667vw;
   line-height: 16vw;
   height: 16vw;
   width: 16vw;
@@ -45,7 +45,7 @@
   width: 16vw;
   background: #f4f4f4;
   border-radius: 16vw;
-  animation: counter-clockwise 5s infinite linear; }
+  animation: counter-clockwise 10s infinite linear; }
 
 @keyframes clockwise {
   0% {
