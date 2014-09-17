@@ -108,10 +108,13 @@ header {
 main {
   margin: 2em auto;
   max-width: 100%;
-  width: 30em;
+  width: 40em;
   position: relative;
   animation-name: mainSwing;
   animation-duration: 2s; }
+
+.bold {
+  font-weight: bold; }
 
 @keyframes mainSwing {
   from {
@@ -126,17 +129,21 @@ footer {
   color: gray; }
 
 body {
-  font-family: sans, sans-serif, Helvetica, Arial; }
+  font-family: sans, sans-serif, Helvetica, Arial;
+  background-color: #f4f4f4;
+  color: #444444;
+  text-shadow: 0 0 0.05em lightgray;
+  line-height: 1.5em; }
 
 a {
   text-decoration: none;
-  color: #228822; }
+  color: orange; }
   a:hover {
     text-decoration: underline; }
   a:active {
     text-decoration: none; }
   a:visited {
-    color: gray; }
+    color: brown; }
 
 ul, ol {
   margin-left: 1em;
@@ -151,20 +158,55 @@ img {
   margin: auto; }
 
 pre {
-  background: #444444;
   padding: 1em;
+  background: #262626;
+  color: #CCCCCC;
   border-radius: 1em;
   margin: 1em 0;
-  color: white;
   box-shadow: 0 0 0.1em 0.1em gray;
   text-shadow: none; }
+
+code {
+  font-family: monospace, "Lucida Console", Monaco;
+  background: #262626;
+  color: #CCCCCC; }
+  code .red {
+    color: #AC4142; }
+  code .green {
+    color: #4E9A06; }
+  code .yellow {
+    color: #C4A000; }
+  code .blue {
+    color: #3465A4; }
+  code .magenta {
+    color: #75507B; }
+  code .cyan {
+    color: #06989A; }
+  code .bold {
+    font-weight: normal; }
+  code .bold.black {
+    color: #555753; }
+  code .bold.red {
+    color: #D24545; }
+  code .bold.green {
+    color: #8AE234; }
+  code .bold.yellow {
+    color: #FCE94F; }
+  code .bold.blue {
+    color: #729FCF; }
+  code .bold.magenta {
+    color: #AD7FA8; }
+  code .bold.cyan {
+    color: #34E2E2; }
+  code .bold.white {
+    color: #F5F5F5; }
 
 h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid lightgray;
   margin-bottom: 1em; }
 
 p {
-  margin: 0 0 1em; }
+  margin: 1.5em 0 1.5em; }
 
 table {
   margin: 1em auto;
@@ -179,9 +221,3 @@ table {
 * {
   padding: 0;
   margin: 0; }
-
-body {
-  background-color: #f4f4f4;
-  font-size: 1.5em;
-  color: #444444;
-  text-shadow: 0.05em 0.05em lightgray; }

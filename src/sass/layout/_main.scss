@@ -1,12 +1,14 @@
 main {
     margin: 2em auto;
     max-width: 100%;
-    width: 30em;
+    width: 40em;
     position: relative;
 
     animation-name: mainSwing;
     animation-duration: 2s;
 }
+
+.bold { font-weight: bold; }
 
 @keyframes mainSwing {
     from {

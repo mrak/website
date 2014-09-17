@@ -41,7 +41,11 @@ gulp.task('clean:markdown', function (done) {
 gulp.task('markdown', ['clean:markdown'], function () {
   return gulp.src(src.md)
     .pipe(marked({
-      highlight: function (code, name) { return highlight.highlight(name, code, true).value; }
+      highlight: function (code, name) {
+        try {
+          return highlight.highlight(name, code, true).value;
+        } catch (e) {}
+      }
     }))
     .pipe(gulp.dest(dest.html))
 });
