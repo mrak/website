@@ -22,3 +22,7 @@ __Location:__ San Francisco, CA
 - Humidity
 - Bananas
 
+Posts
+=====
+
+[stubby4node](/2012-10-09/stubby4node) - a stub server for node.js
