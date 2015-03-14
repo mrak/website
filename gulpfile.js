@@ -1,18 +1,20 @@
 'use strict';
 
 var gulp = require('gulp');
-var lazypipe = require('lazypipe');
 var eslint = require('gulp-eslint');
-var browserify = require('gulp-browserify');
+var browserify = require('browserify');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var marked = require('gulp-markdown');
 var sass = require('gulp-sass');
 var highlight = require('highlight.js');
 var rimraf = require('rimraf');
+var vinyl = require('vinyl-source-stream');
+var stream = require('gulp-streamify');
 
 var src = {
   js: 'src/js/**/*.js',
+  main: './src/js/main.js',
   md: 'src/markdown/**/*.md',
   sass: 'src/sass/**/*.scss',
   spec: 'spec/**/*.js',
@@ -51,18 +53,19 @@ gulp.task('markdown', ['clean:markdown'], function () {
 gulp.task('styles', function () {
   return gulp.src(src.sass)
     .pipe(sass({ errLogToConsole: true }))
-    .pipe(rename('styles.css'))
+    .pipe(stream(rename('styles.css')))
     .pipe(gulp.dest(dest.css));
 });
 
 gulp.task('scripts', function () {
-  return gulp.src(src.js)
-    .pipe(browserify({}))
-    .pipe(rename(dest.js))
+  return browserify({})
+    .add(src.main)
+    .bundle()
+    .pipe(vinyl(dest.js))
     .pipe(gulp.dest(dest.dist))
 
-    .pipe(uglify())
-    .pipe(rename(dest.min))
+    .pipe(stream(uglify()))
+    .pipe(stream(rename(dest.min)))
     .pipe(gulp.dest(dest.dist));
 });
 

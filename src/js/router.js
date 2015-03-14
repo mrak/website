@@ -13,7 +13,7 @@ function type(el, text, callback) {
       return;
     }
 
-    el.innerHTML = el.innerHTML + next;
+    el.innerHTML += next;
   }, 150);
 }
 
@@ -24,13 +24,12 @@ function typewriter(content, callback) {
   if (typewriterNode == null) {
     callback();
     return;
-  } else {
-    text = typewriterNode.innerHTML;
   }
 
+  text = typewriterNode.innerHTML;
   article = document.querySelector('main article');
   writeNode = document.createElement('h1');
-  writeNode.innerHTML = "> ";
+  writeNode.innerHTML = '> ';
   article.appendChild(writeNode);
 
   type(writeNode, text, callback);
@@ -38,11 +37,13 @@ function typewriter(content, callback) {
 
 function go(resource) {
   var article = document.querySelector('main article');
-  article.innerHTML = "";
+  article.innerHTML = '';
 
   request
     .get(resource)
     .end(function (err, res) {
+      var wrapper;
+
       if (err) {
         console.error(err);
         return;
@@ -52,7 +53,7 @@ function go(resource) {
         return;
       }
 
-      var wrapper = document.createElement('div');
+      wrapper = document.createElement('div');
       wrapper.className =
       wrapper.innerHTML = res.text;
 
@@ -62,8 +63,10 @@ function go(resource) {
     });
 }
 
-if (/^\/?$/.test(window.location.pathname)) {
-  go('/html/landing.html');
-} else {
-  go('/html' + window.location.pathname + '.html');
-}
+module.exports = function() {
+  if (/^\/?$/.test(window.location.pathname)) {
+    go('/html/landing.html');
+  } else {
+    go('/html' + window.location.pathname + '.html');
+  }
+};

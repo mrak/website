@@ -1,4 +1,11 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+'use strict';
+
+var router = require('./router');
+
+router();
+
+},{"./router":5}],2:[function(require,module,exports){
 /**
  * Module dependencies.
  */
@@ -1049,7 +1056,7 @@ request.put = function(url, data, fn){
 
 module.exports = request;
 
-},{"emitter":2,"reduce":3}],2:[function(require,module,exports){
+},{"emitter":3,"reduce":4}],3:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -1215,7 +1222,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 
 /**
  * Reduce `arr` with `fn`.
@@ -1240,7 +1247,7 @@ module.exports = function(arr, fn, initial){
   
   return curr;
 };
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 'use strict';
 
 var request = require('superagent');
@@ -1305,10 +1312,12 @@ function go(resource) {
     });
 }
 
-if (/^\/?$/.test(window.location.pathname)) {
-  go('/html/landing.html');
-} else {
-  go('/html' + window.location.pathname + '.html');
-}
+module.exports = function() {
+  if (/^\/?$/.test(window.location.pathname)) {
+    go('/html/landing.html');
+  } else {
+    go('/html' + window.location.pathname + '.html');
+  }
+};
 
-},{"superagent":1}]},{},[4])
+},{"superagent":2}]},{},[1]);

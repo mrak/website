@@ -2,4 +2,4 @@
 
 var router = require('./router');
 
-router.route();
+router();
