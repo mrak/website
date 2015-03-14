@@ -3,14 +3,10 @@ a {
     color: orange;
 
     &:hover {
-        text-decoration: underline;
+        font-weight: bold;
     }
 
     &:active {
         text-decoration: none;
-    }
-
-    &:visited {
-        color: brown;
     }
 }

@@ -2,8 +2,7 @@
 
 var gulp = require('gulp');
 var lazypipe = require('lazypipe');
-var jscs = require('gulp-jscs');
-var jshint = require('gulp-jshint');
+var eslint = require('gulp-eslint');
 var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
@@ -29,9 +28,8 @@ var dest = {
 
 gulp.task('lint', function () {
   return gulp.src(src.js)
-    .pipe(jscs)
-    .pipe(jshint)
-    .pipe(jshint.reporter,'jshint-stylish');
+    .pipe(eslint())
+    .pipe(eslint.format());
 });
 
 gulp.task('clean:markdown', function (done) {
@@ -71,7 +69,7 @@ gulp.task('scripts', function () {
 gulp.task('test', ['lint'], function () {
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', ['build'], function () {
   gulp.watch(src.md, ['markdown']);
   gulp.watch(src.js, ['scripts']);
   gulp.watch(src.sass, ['styles']);

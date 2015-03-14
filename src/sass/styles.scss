@@ -1,9 +1,11 @@
 @import 'palette';
+@import 'variables';
 @import '404';
 @import 'layout/header';
 @import 'layout/main';
 @import 'layout/footer';
 @import 'base/body';
+@import 'base/dl';
 @import 'base/link';
 @import 'base/list';
 @import 'base/blockquote';
@@ -12,8 +14,4 @@
 @import 'base/header';
 @import 'base/paragraph';
 @import 'base/table';
-
-* {
-    padding: 0;
-    margin: 0;
-}
+@import 'base/text';

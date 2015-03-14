@@ -1,20 +1,17 @@
 {
   "scripts": {
-    "start": "node server.js",
     "test": "gulp test"
   },
   "devDependencies": {
     "gulp": "^3.8.7",
     "gulp-browserify": "^0.5.0",
-    "gulp-jscs": "^1.1.0",
-    "gulp-jshint": "^1.8.4",
+    "gulp-eslint": "^0.6.0",
     "gulp-markdown": "^0.2.0",
     "gulp-marked": "^0.2.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^0.7.3",
     "gulp-uglify": "^0.3.1",
     "highlight.js": "^8.2.0",
-    "jshint-stylish": "^0.4.0",
     "lazypipe": "^0.2.2",
     "rimraf": "^2.2.8"
   },

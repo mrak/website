@@ -1,4 +1,18 @@
 h1, h2, h3, h4, h5, h6 {
-    border-bottom: 1px solid lightgray;
     margin-bottom: 1em;
+}
+
+h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+h1 {
+    border-bottom: 1px solid $foreground;
+    word-wrap: break-word;
+    height: 1em;
+    overflow: hidden;
+}
+
+h2 {
+    color: $term-color4;
 }
