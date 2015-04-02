@@ -1,11 +1,11 @@
 'use strict';
 
-var request = require('superagent');
+import request from 'superagent';
 
 function type(el, text, callback) {
-  var arr = text.split('');
-  var interval = setInterval(function() {
-    var next = arr.shift();
+  const arr = text.split('');
+  const interval = setInterval(() => {
+    const next = arr.shift();
 
     if (next == null) {
       clearInterval(interval);
@@ -18,17 +18,16 @@ function type(el, text, callback) {
 }
 
 function typewriter(content, callback) {
-  var article, text, writeNode;
-  var typewriterNode = content.querySelector('#typewriter');
+  const typewriterNode = content.querySelector('#typewriter');
 
   if (typewriterNode == null) {
     callback();
     return;
   }
 
-  text = typewriterNode.innerHTML;
-  article = document.querySelector('main article');
-  writeNode = document.createElement('h1');
+  const text = typewriterNode.innerHTML;
+  const article = document.querySelector('main article');
+  const writeNode = document.createElement('h1');
   writeNode.innerHTML = '> ';
   article.appendChild(writeNode);
 
@@ -36,14 +35,12 @@ function typewriter(content, callback) {
 }
 
 function go(resource) {
-  var article = document.querySelector('main article');
+  const article = document.querySelector('main article');
   article.innerHTML = '';
 
   request
     .get(resource)
-    .end(function (err, res) {
-      var wrapper;
-
+    .end((err, res) => {
       if (err) {
         console.error(err);
         return;
@@ -53,20 +50,20 @@ function go(resource) {
         return;
       }
 
-      wrapper = document.createElement('div');
+      const wrapper = document.createElement('div');
       wrapper.className =
       wrapper.innerHTML = res.text;
 
-      typewriter(wrapper, function () {
+      typewriter(wrapper, () => {
         document.querySelector('main article').appendChild(wrapper);
       });
     });
 }
 
-module.exports = function() {
+export default function() {
   if (/^\/?$/.test(window.location.pathname)) {
     go('/html/landing.html');
   } else {
     go('/html' + window.location.pathname + '.html');
   }
-};
+}

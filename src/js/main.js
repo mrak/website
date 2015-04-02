@@ -1,5 +1,5 @@
 'use strict';
 
-var router = require('./router');
+import router from './router';
 
 router();

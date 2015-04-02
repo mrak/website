@@ -8,9 +8,9 @@ var rename = require('gulp-rename');
 var marked = require('gulp-markdown');
 var sass = require('gulp-sass');
 var highlight = require('highlight.js');
-var rimraf = require('rimraf');
 var vinyl = require('vinyl-source-stream');
 var stream = require('gulp-streamify');
+var del = require('del');
 
 var src = {
   js: 'src/js/**/*.js',
@@ -35,7 +35,7 @@ gulp.task('lint', function () {
 });
 
 gulp.task('clean:markdown', function (done) {
-  rimraf(dest.html, done);
+  del(dest.html, done);
 })
 
 gulp.task('markdown', ['clean:markdown'], function () {
