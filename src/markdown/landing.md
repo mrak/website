@@ -10,10 +10,11 @@ __ericmrak__ \[_OPTION_\]... \[_PROJECT_\]...
 
 ## Description
 
-Eric Mrak is a software developer in the Bay Area. He specializes in front-end
-development and has degrees in Computer Science and Human-Computer Interaction.
-He is currently employed at [Braintree](https://braintreepayments.com/team) as a
-full-stack developer on the SDK team.
+Eric Mrak is a senior software developer in the Bay Area. He specializes in
+front-end development and devops with degrees in Computer Science and
+Human-Computer Interaction.  He is currently employed at
+[Braintree](https://braintreepayments.com/team) as a full-stack developer on the
+infrastructure team.
 
 ## Options
 
