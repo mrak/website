@@ -8,8 +8,6 @@ var rename = require('gulp-rename');
 var marked = require('gulp-markdown');
 var sass = require('gulp-sass');
 var highlight = require('highlight.js');
-var vinyl = require('vinyl-source-stream');
-var stream = require('gulp-streamify');
 var del = require('del');
 
 var src = {
@@ -53,7 +51,7 @@ gulp.task('markdown', ['clean:markdown'], function () {
 gulp.task('styles', function () {
   return gulp.src(src.sass)
     .pipe(sass({ errLogToConsole: true }))
-    .pipe(stream(rename('styles.css')))
+    .pipe(rename('styles.css'))
     .pipe(gulp.dest(dest.css));
 });
 
@@ -61,11 +59,11 @@ gulp.task('scripts', function () {
   return browserify({})
     .add(src.main)
     .bundle()
-    .pipe(vinyl(dest.js))
+    .pipe(dest.js)
     .pipe(gulp.dest(dest.dist))
 
-    .pipe(stream(uglify()))
-    .pipe(stream(rename(dest.min)))
+    .pipe(uglify())
+    .pipe(rename(dest.min))
     .pipe(gulp.dest(dest.dist));
 });
 

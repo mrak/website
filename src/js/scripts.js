@@ -1,7 +1,5 @@
 'use strict';
 
-import request from 'superagent';
-
 function type(el, text, callback) {
   const arr = text.split('');
   const interval = setInterval(() => {
@@ -38,32 +36,30 @@ function go(resource) {
   const article = document.querySelector('main article');
   article.innerHTML = '';
 
-  request
-    .get(resource)
-    .end((err, res) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      if (res.notFound || /^<!doctype html>/.test(res.text)) {
-        go('/html/404.html');
-        return;
-      }
+  const response = await fetch(resource);
+  if (response.status === 404) {
+    go('/html/404.html');
+    return;
+  }
+  if (!response.ok) {
+    const err = await response.error();
+    console.error(err);
+    return;
+  }
+  const text = await response.text()
+  const wrapper = document.createElement('div');
+  wrapper.className = "";
+  wrapper.innerHTML = text;
 
-      const wrapper = document.createElement('div');
-      wrapper.className =
-      wrapper.innerHTML = res.text;
-
-      typewriter(wrapper, () => {
-        document.querySelector('main article').appendChild(wrapper);
-      });
-    });
+  typewriter(wrapper, () => {
+    document.querySelector('main article').appendChild(wrapper);
+  });
 }
 
-export default function() {
+function() {
   if (/^\/?$/.test(window.location.pathname)) {
     go('/html/landing.html');
   } else {
     go('/html' + window.location.pathname + '.html');
   }
-}
+}()
