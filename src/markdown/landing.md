@@ -2,7 +2,7 @@
 
 ## Name
 
-Eric "Mrak" Mrak - a full-stack, polyglot web developer
+Eric "Mrak" Mrak - distributed cloud computing platform engineer
 
 ## Synopsis
 
@@ -10,35 +10,34 @@ __ericmrak__ \[_OPTION_\]... \[_PROJECT_\]...
 
 ## Description
 
-Eric Mrak is a senior software developer in the Bay Area. He specializes in
-front-end development and devops with degrees in Computer Science and
-Human-Computer Interaction.  He is currently employed at
-[Braintree](https://braintreepayments.com/team) as a full-stack developer on the
-infrastructure team.
+Eric Mrak is a software developer in the Bay Area. He specializes in cloud infrastructure
+development and has degrees in Computer Science and Human-Computer Interaction.
+He is currently employed at [Brex](https://brex.com) as a
+Senior Software Engineer on the Cloud Infrastructure team.
 
 ## Options
 
 <dl>
-    <dt>__-l__, __--language__=_LANG_</dt>
-    <dd>specify a language for Mrak to use</dd>
+<dt><strong>-l</strong>, <strong>--language</strong>=<em>LANG</em></dt>
+<dd>specify a language for Mrak to use</dd>
 
-    <dt>__-t__, __--tool__=_TOOL_</dt>
-    <dd>specify a build tool for Mrak to use</dd>
+<dt><strong>-t</strong>, <strong>--tool</strong>=_TOOL_</dt>
+<dd>specify a build tool for Mrak to use</dd>
 
-    <dt>__-f__, __--framework__=_FRAMEWORK_</dt>
-    <dd>specify a software framework for Mrak to use</dd>
+<dt><strong>-p</strong>, <strong>--platform</strong>=_FRAMEWORK_</dt>
+<dd>specify a cloud platform for Mrak to use</dd>
 
-    <dt>__-d__, __--databases__=_DB_</dt>
-    <dd>specify a database for Mrak to use</dd>
+<dt><strong>-d</strong>, <strong>--databases</strong>=_DB_</dt>
+<dd>specify a database for Mrak to use</dd>
 
-    <dt>__-v__, __--verbose__</dt>
-    <dd>increase Mrak's verbal feedback</dd>
+<dt><strong>-v</strong>, <strong>--verbose</strong></dt>
+<dd>increase Mrak's verbal feedback</dd>
 
-    <dt>__-h__, __--help__</dt>
-    <dd>ask Mrak for help</dd>
+<dt><strong>-h</strong>, <strong>--help</strong></dt>
+<dd>ask Mrak for help</dd>
 
-    <dt>__--version__</dt>
-    <dd>show version information</dd>
+<dt><strong>--version</strong></dt>
+<dd>show version information</dd>
 </dl>
 
 
@@ -51,7 +50,7 @@ Submit bug reports via the GitHub [issues page](https://github.com/mrak/ericmrak
 
 ## Copyright
 
-Copyright &copy; 2015 Eric Mrak. License under [The
+Copyright &copy; 2023 Eric Mrak. License under [The
 Unlicense](http://unlicense.org).
 
 ## See also
