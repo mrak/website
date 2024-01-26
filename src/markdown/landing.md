@@ -21,13 +21,13 @@ Senior Software Engineer on the Cloud Infrastructure team.
 <dt><strong>-l</strong>, <strong>--language</strong>=<em>LANG</em></dt>
 <dd>specify a language for Mrak to use</dd>
 
-<dt><strong>-t</strong>, <strong>--tool</strong>=_TOOL_</dt>
+<dt><strong>-t</strong>, <strong>--tool</strong>=<em>TOOL</em></dt>
 <dd>specify a build tool for Mrak to use</dd>
 
-<dt><strong>-p</strong>, <strong>--platform</strong>=_FRAMEWORK_</dt>
+<dt><strong>-p</strong>, <strong>--platform</strong>=<em>FRAMEWORK</em></dt>
 <dd>specify a cloud platform for Mrak to use</dd>
 
-<dt><strong>-d</strong>, <strong>--databases</strong>=_DB_</dt>
+<dt><strong>-d</strong>, <strong>--databases</strong>=<em>DB</em></dt>
 <dd>specify a database for Mrak to use</dd>
 
 <dt><strong>-v</strong>, <strong>--verbose</strong></dt>
@@ -46,7 +46,7 @@ Senior Software Engineer on the Cloud Infrastructure team.
 
 ## Reporting bugs
 
-Submit bug reports via the GitHub [issues page](https://github.com/mrak/ericmrak.info/issues) for this website.
+Submit bug reports via the GitHub [issues page](https://github.com/mrak/website/issues) for this website.
 
 ## Copyright
 
