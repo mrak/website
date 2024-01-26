@@ -20,18 +20,23 @@ Senior Software Engineer on the Cloud Infrastructure team.
 <dl>
 <dt><strong>-l</strong>, <strong>--language</strong>=<em>LANG</em></dt>
 <dd>specify a language for Mrak to use</dd>
+<dd>can be specified more than once</dd>
 
 <dt><strong>-t</strong>, <strong>--tool</strong>=<em>TOOL</em></dt>
 <dd>specify a build tool for Mrak to use</dd>
+<dd>can be specified more than once</dd>
 
 <dt><strong>-p</strong>, <strong>--platform</strong>=<em>PLATFORM</em></dt>
 <dd>specify a cloud platform for Mrak to use</dd>
+<dd>can be specified more than once</dd>
 
-<dt><strong>-d</strong>, <strong>--databases</strong>=<em>DB</em></dt>
+<dt><strong>-d</strong>, <strong>--database</strong>=<em>DB</em></dt>
 <dd>specify a database for Mrak to use</dd>
+<dd>can be specified more than once</dd>
 
 <dt><strong>-v</strong>, <strong>--verbose</strong></dt>
 <dd>increase Mrak's verbal feedback</dd>
+<dd>can be specified more than once</dd>
 
 <dt><strong>-h</strong>, <strong>--help</strong></dt>
 <dd>ask Mrak for help</dd>
@@ -40,9 +45,14 @@ Senior Software Engineer on the Cloud Infrastructure team.
 <dd>show version information</dd>
 </dl>
 
-
-
 ## Examples
+
+__ericmrak__ _OPERATION_K8S_ \\
+<br>&emsp; __--platform__=_AWS_ &emsp;&emsp;&emsp;&emsp;&emsp; \\
+<br>&emsp; __--tool__=_EKS_ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; \\
+<br>&emsp; __--tool__=_terraform_ &emsp;&emsp;&emsp; \\
+<br>&emsp; __--language__=_golang_ &emsp;&emsp; \\
+<br>&emsp; __--database__=_Aurora_
 
 ## Reporting bugs
 
