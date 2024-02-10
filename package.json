@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "./build/build.sh"
+    "build": "./build/build.sh",
+    "start": "nginx -c $PWD/nginx.conf -p $PWD"
   },
   "devDependencies": {
     "marked-highlight" : "^2.1.0",

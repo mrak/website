@@ -290,10 +290,15 @@ h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  border-bottom: 1px solid #FEFEFE;
   word-wrap: break-word;
   height: 1em;
   overflow: hidden;
+  color: #06989A;
+}
+
+h1 u {
+  color: #06989A;
+  text-decoration-line: underline;
 }
 
 h2 {
@@ -305,16 +310,11 @@ p {
 }
 
 table {
-  margin: 1em auto;
-  box-shadow: inset 0 0 0.1em 0.1em lightgray;
-  border-radius: 1em;
+  width: 100%;
   padding: 1em 0;
 }
-table th, table td {
-  padding: 0 1em;
-}
 table th {
-  text-align: left;
+  color: #06989A;
 }
 
 strong {

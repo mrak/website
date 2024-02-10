@@ -1,4 +1,5 @@
-<script id="typewriter">man ericmrak</script>
+| <u>ERICMRAK</u>(1) | Software Developers | <u>ERICMRAK</u>(1) |
+|:--------------|:-------------------:|--------------:|
 
 ## Name
 

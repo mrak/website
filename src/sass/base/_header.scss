@@ -7,10 +7,15 @@ h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    border-bottom: 1px solid $foreground;
     word-wrap: break-word;
     height: 1em;
     overflow: hidden;
+    color: $term-color6;
+}
+
+h1 u {
+    color: $term-color6;
+    text-decoration-line: underline;
 }
 
 h2 {
