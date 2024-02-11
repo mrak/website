@@ -61,8 +61,7 @@ Submit bug reports via the GitHub [issues page](https://github.com/mrak/website/
 
 ## Copyright
 
-<!--#config timefmt="%Y" -->
-Copyright &copy; <!--#echo var="DATE_LOCAL" --> Eric Mrak. License under [The
+Copyright &copy; @COPYRIGHT@ Eric Mrak. License under [The
 Unlicense](http://unlicense.org).
 
 ## See also
