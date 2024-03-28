@@ -13,8 +13,8 @@ __ericmrak__ \[_OPTION_\]... \[_PROJECT_\]...
 
 Eric Mrak is a software developer in the Bay Area. He specializes in cloud infrastructure
 development and has degrees in Computer Science and Human-Computer Interaction.
-He is currently employed at [Brex](https://brex.com) as a
-Senior Software Engineer on the Cloud Infrastructure team.
+He is currently employed at [Fastly](https://fastly.com) as a
+Senior Site Reliability Engineer.
 
 ## Options
 
